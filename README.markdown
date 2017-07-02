@@ -30,6 +30,14 @@ because I'm using seq.el.
 
 This is not on MELPA yet.
 
+# Usage
+
+`counsel-surfraw` will prompt the user to enter their search terms,
+then will provide a list of search engines provided by Surfraw.
+
+You may search for the thing at point by pressing <kbd>M-p</kbd>
+at the first prompt.
+
 # How to change the browser
 
 By default, emacs should open links in the OS' default browser.
