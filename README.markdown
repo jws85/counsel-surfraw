@@ -28,6 +28,8 @@ because I'm using seq.el.
 (global-set-key (kbd "C-c w") 'counsel-surfraw)
 ```
 
+This is not on MELPA yet.
+
 # How to change the browser
 
 By default, emacs should open links in the OS' default browser.
