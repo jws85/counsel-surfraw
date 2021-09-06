@@ -22,7 +22,10 @@
   "Search for something online, using the surfraw command."
   (interactive)
   (let ((search-for (read-string "Search for: " nil 'counsel-surfraw-search-history
-                                 (thing-at-point 'symbol))))
+                                 (if (use-region-p)
+                                     (buffer-substring-no-properties
+                                      (region-beginning) (region-end))
+                                   (thing-at-point 'symbol)))))
     (ivy-read (format "Search for `%s` with: " search-for)
               #'counsel-surfraw-elvi
               :require-match t
